@@ -1,0 +1,65 @@
+{
+  "name": "Reseller",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da revendedora"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone/WhatsApp"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string",
+      "description": "Endere\u00e7o completo"
+    },
+    "numero": {
+      "type": "string",
+      "description": "N\u00famero do im\u00f3vel"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "representative_email": {
+      "type": "string",
+      "description": "Email do representante respons\u00e1vel"
+    },
+    "commission_rate": {
+      "type": "number",
+      "default": 30,
+      "description": "% de comiss\u00e3o da revendedora"
+    },
+    "balance": {
+      "type": "number",
+      "default": 0,
+      "description": "Saldo devedor"
+    },
+    "region": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}

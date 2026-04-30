@@ -1,0 +1,52 @@
+{
+  "name": "FinancialTransaction",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "entrada",
+        "saida",
+        "comissao",
+        "perda"
+      ],
+      "description": "Tipo da transa\u00e7\u00e3o"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "reference_id": {
+      "type": "string",
+      "description": "ID do acerto ou kit relacionado"
+    },
+    "reseller_name": {
+      "type": "string"
+    },
+    "representative_email": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "confirmado",
+        "pendente",
+        "cancelado"
+      ],
+      "default": "confirmado"
+    }
+  },
+  "required": [
+    "type",
+    "amount"
+  ]
+}

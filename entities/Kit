@@ -1,0 +1,28 @@
+{
+  "name": "Kit",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "C\u00f3digo do kit"
+    },
+    "reseller_id": {
+      "type": "string",
+      "description": "ID da revendedora"
+    },
+    "reseller_name": {
+      "type": "string"
+    },
+    "representative_email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "preparando",
+        "entregue",
+        "em_acerto",
+        "finalizado",
+        "cancelado"
+      ],
+      "default": "preparando"

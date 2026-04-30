@@ -1,0 +1,86 @@
+{
+  "name": "Settlement",
+  "type": "object",
+  "properties": {
+    "kit_id": {
+      "type": "string"
+    },
+    "kit_code": {
+      "type": "string"
+    },
+    "reseller_id": {
+      "type": "string"
+    },
+    "reseller_name": {
+      "type": "string"
+    },
+    "representative_email": {
+      "type": "string"
+    },
+    "items_sold": {
+      "type": "number",
+      "default": 0
+    },
+    "items_returned": {
+      "type": "number",
+      "default": 0
+    },
+    "items_lost": {
+      "type": "number",
+      "default": 0
+    },
+    "total_sales": {
+      "type": "number",
+      "default": 0
+    },
+    "commission_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "amount_due": {
+      "type": "number",
+      "default": 0
+    },
+    "amount_paid": {
+      "type": "number",
+      "default": 0
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "dinheiro",
+        "pix",
+        "cartao",
+        "boleto",
+        "parcial"
+      ]
+    },
+    "signature_url": {
+      "type": "string",
+      "description": "URL da assinatura digital"
+    },
+    "geolocation": {
+      "type": "string",
+      "description": "Lat,Lng do local do acerto"
+    },
+    "settlement_address": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "concluido",
+        "parcial"
+      ],
+      "default": "pendente"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kit_id",
+    "reseller_id"
+  ]
+}

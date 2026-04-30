@@ -1,0 +1,63 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do produto"
+    },
+    "sku": {
+      "type": "string",
+      "description": "C\u00f3digo SKU \u00fanico"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cosmeticos",
+        "perfumaria",
+        "cuidados_pessoais",
+        "maquiagem",
+        "acessorios",
+        "outros"
+      ],
+      "description": "Categoria do produto"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL da foto do produto"
+    },
+    "sale_price": {
+      "type": "number",
+      "description": "Pre\u00e7o de venda"
+    },
+    "cost_price": {
+      "type": "number",
+      "description": "Pre\u00e7o de custo"
+    },
+    "central_stock": {
+      "type": "number",
+      "default": 0,
+      "description": "Estoque central dispon\u00edvel"
+    },
+    "transit_stock": {
+      "type": "number",
+      "default": 0,
+      "description": "Estoque em tr\u00e2nsito"
+    },
+    "min_stock": {
+      "type": "number",
+      "default": 5,
+      "description": "Estoque m\u00ednimo para alerta"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "sku",
+    "sale_price",
+    "cost_price"
+  ]
+}
